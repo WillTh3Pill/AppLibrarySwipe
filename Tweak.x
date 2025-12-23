@@ -1,3 +1,6 @@
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 @interface SBIconController : UIViewController
 - (void)presentSpotlightAnimated:(BOOL)animated;
 - (void)dismissSpotlightAnimated:(BOOL)animated completionHandler:(id)completion;
@@ -31,7 +34,7 @@
         // After App Library is presented, open search
         dispatch_async(dispatch_get_main_queue(), ^{
             // Get the library view controller and trigger search
-            SBHLibraryViewController *libraryVC = (SBHLibraryViewController *)[self _iconManager].libraryViewController;
+            SBHLibraryViewController *libraryVC = (SBHLibraryViewController *)[self valueForKey:@"_iconManager"];
             if (libraryVC && [libraryVC respondsToSelector:@selector(presentSearchAnimated:)]) {
                 [libraryVC presentSearchAnimated:YES];
             }
