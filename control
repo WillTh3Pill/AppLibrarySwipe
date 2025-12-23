@@ -1,0 +1,9 @@
+Package: com.yourrepo.applibraryswipe
+Name: AppLibrarySwipe
+Version: 1.0.1
+Architecture: iphoneos-arm
+Description: Redirects home screen swipe-down gesture to App Library search instead of Spotlight (iOS 16 optimized)
+Maintainer: YourName
+Author: YourName
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader
